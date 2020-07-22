@@ -7398,3 +7398,59 @@ body {
 /********* Footer *******************/
 footer {
   background-color: #e19d20 !important; }
+
+/****************** Hero2 Contact*****************************/
+#heroContact {
+  background-image: url("../images/Dettifoss.jpg");
+  background-position: center;
+  background-size: cover;
+  animation-name: HeroIntro;
+  animation-duration: 2s; }
+  #heroContact #navbarMenuHeroC {
+    flex-direction: row;
+    justify-content: center; }
+  #heroContact .navbar-item {
+    font-family: 'Amatic SC', cursive;
+    font-size: 2em;
+    animation-name: NavIntro;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    color: #2C8445; }
+  #heroContact .navbar-item:hover {
+    color: #e19d20;
+    background-color: transparent; }
+  #heroContact #navItem1 {
+    animation-delay: .70s; }
+  #heroContact #navItem2 {
+    animation-delay: .85s; }
+  #heroContact #navItem3 {
+    animation-delay: 1s; }
+  #heroContact .hero-body div {
+    position: relative; }
+  #heroContact #logo {
+    max-width: 25vw;
+    height: 8vw;
+    animation-name: NavIntro;
+    animation-delay: 1.15s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-duration: 2s; }
+
+#ContactForm {
+  width: 30vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1%;
+  position: relative; }
+
+#ContactForm::before {
+  content: "";
+  height: 100%;
+  width: 30vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #646464;
+  opacity: .6;
+  border-radius: 5px; }
