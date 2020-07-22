@@ -1,0 +1,413 @@
+@charset "utf-8";
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+/*
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+// 2. Set your own initial variables
+// Update the blue shade, used for links
+$blue: #06bcef;
+// Add pink and its invert
+$pink: #ff8080;
+$pink-invert: #fff;
+// Update the sans-serif font family
+$family-sans-serif: "Helvetica", "Arial", sans-serif;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $pink;
+$primary-invert: $pink-invert;
+
+// 4. Import the rest of Bulma
+*/
+
+@import "../node_modules/bulma/bulma";
+
+// * {outline: 1px dashed red;}
+
+//Colors ****************************
+$orange: #e19d20;
+$grey: #646464;
+$green: #2C8445;
+// ************* fonts *******************
+$normalText: "Dosis";
+
+body{
+   
+    padding: 0;
+}
+#siteBody{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#hero {
+    background-image: url("../images/Blue-Lagoon.jpg");
+    background-position: center;
+    background-size: cover;
+    animation-name: HeroIntro;
+    animation-duration: 2s;
+
+    #navbarMenuHeroC{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navbar-item{
+        font-family: 'Amatic SC', cursive;
+        font-size: 2em;
+        animation-name: NavIntro;
+        animation-duration: 2s;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        color: $green;
+    }
+    .navbar-item:hover{
+        color: $orange;
+        background-color: transparent;
+    }
+
+    #navItem1{
+        animation-delay: .70s;
+    }
+    #navItem2{
+        animation-delay: .85s;
+    }
+    #navItem3{
+        animation-delay: 1s;
+    }
+
+    .hero-body{
+        // border: solid black;
+        div{
+            position: relative;
+            // border: solid black;
+        }
+    }
+
+    #logo{
+        max-width: 25vw;
+        height: 8vw;
+        animation-name: NavIntro;
+        animation-delay: 1.15s;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        animation-duration: 2s;
+    }
+}
+
+/******************************** Containers ***********************/
+
+.extendedPadding{
+    padding-top: 15%;
+    padding-bottom: 15%; 
+}
+
+/********************** Intro *****************************************/
+
+#intro{
+    width: 20%;
+    position: relative;
+    h1{
+        font-family: "Amatic SC", cursive;
+        font-size: 3vw;
+        color: $orange;
+        padding-bottom: 5vw;
+    }
+    
+    div{
+        border-left: solid $orange;
+        padding-left: 1.2vw;
+        p{
+            text-align: left;
+            
+        }
+    }
+    
+}
+
+#stickyIcons{
+    z-index: 99;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 15%;
+    padding-left: 5%;
+    padding-top: 2%;
+    a{
+        color: $green;
+    }
+
+    .extra-pad{
+        padding-left: 2vw;
+        padding-top : .5vw;
+    }
+
+    h1{
+        color: $orange;
+        font-family: "Amatic SC", cursive;
+        font-size: 3vh;
+    }
+}
+
+
+/******************************** Service CArds *************************/
+
+#serviceCards{
+    margin-left: 15%;
+    margin-right: 15%;
+
+    .card{
+        box-shadow: none;
+    }
+    .card-image:hover{
+        filter: brightness(1.1);
+        transform: scale(1.03);
+    }
+   
+
+    .cardBar{
+        width: 100%;
+        height: 2vh;
+        background-color: $green;
+    }
+
+    .activityHeading{
+        font-family: "Amatic SC", cursive;
+        font-size: 1.5vw;
+        color: $orange;
+    }
+    .content{
+        p{
+            font-size: .8vw;
+        }
+    }
+   
+}
+
+.round-edges{
+    border-radius: 7px;
+}
+
+.image img{
+    object-fit: cover;
+}
+
+
+// Image Tiles *****************************************
+#ImageTiles {
+    background-color: $grey;
+    position: relative;
+
+    #featuredText{
+        font-family: 'Grand Hotel', cursive;
+        position: absolute;
+        top: 2%;
+        left: 35%;
+        color: $orange;
+        font-size: 7vw;
+        
+    }
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 10vh);
+        max-width: 800px;
+       margin-left: auto;
+       margin-right: auto;
+    }
+    
+
+    .grid-image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+    }
+
+    .grid-item:hover{
+        animation-name: TileHover; 
+        animation-fill-mode: forwards;
+        transform: scale(1.03);
+        .tooltiptext{
+            animation-name: TooltipText;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    .tooltiptext{
+        z-index: 99;
+        opacity: 0;
+        font-family: "Amatic SC", cursive;
+        font-size: 2vw;
+        color: white;
+        position: relative;
+        display: inline-block;
+    }
+
+    #tile1{
+        grid-area: 1/1/5/5;
+        z-index: 0;
+    }
+    #tile1Text{
+        top: -17%;
+        left: 10%;
+    }
+    #tile2{
+        grid-area: 1/5/3/7;
+        z-index: 0;
+    }
+    #tile2Text{
+        top: -33%;
+        left: 7%;
+    }
+    #tile3{
+        grid-area: 1/7/4/9;
+    }
+    #tile3Text{
+        top: -20%;
+        left: -5%;
+    }
+    #tile4{
+        grid-area: 3/5/7/7;
+    }
+    #tile4Text{
+        top: -70%;
+        left: -0%;
+    }
+    #tile5{
+        grid-area: 5/1/7/5;
+    }
+    #tile5Text{
+        top: -100%;
+        left: 0%;
+    }
+    #tile6{
+        grid-area: 7/1/9/3;
+        // background-color: orange;
+    }
+    #tile6Text{
+        top: -30%;
+        left: 0%;
+    }
+    #tile7{
+        grid-area: 4/7/6/9;
+        // background-color: orange;
+    }
+    #tile7Text{
+        top: -108%;
+        left: 15%;
+    }
+    #tile8{
+        grid-area: 7/3/9/7;
+        // background-color: orange;
+    }
+    #tile8Text{
+        top: -30%;
+        left: 30%;
+    }
+    #tile9{
+        grid-area: 6/7/9/9;
+        // background-color: orange;
+    }
+    #tile9Text{
+        top: -60%;
+        left: -8%;
+    }
+}
+
+
+// Animations *******************************************
+//Entry Animation
+
+@keyframes HeroIntro{
+    from {filter: blur(5px)}
+    to {filter: blur(0)}
+  }
+
+  @keyframes NavIntro{
+      from {opacity: 0;
+            transform: translateY(10%);}
+      to {opacity: 1;
+            }
+  }
+
+
+  // Tile animations *****************************
+
+  @keyframes TileHover{
+    from {filter: brightness(1);}
+    to {filter: brightness(1.2);}
+  }
+
+  @keyframes TooltipText{
+    from {opacity: 0; }
+    to {opacity: 1; transform: translateX(15%);}
+  }
+  
+  /*************************** MOdal *******************************/
+
+#modal-pic{
+    max-height: 10vw;
+}
+
+.modal-card-head{
+    font-family: "Amatic SC", cursive;
+    border: none;
+    background-color: white;
+    #modalTitle{
+        font-size: 3vw !important;
+        color: $green;
+    }
+}
+.modal-card-body{
+    padding: 0;
+    overflow: hidden;
+}
+
+.modal-card-foot{
+    border: none;
+    background-color: white;
+}
+#modalDescription{
+        // position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: $orange;
+        color: white;
+        font-family: 'Dosis', sans-serif;
+        // font-size: 1vw;
+    
+    }
+
+#button{
+    background-color: $green;
+    color: white;
+    position: absolute;
+    top: 47%;
+    left: 40%;
+    border: none;
+}
+.modal-card-foot{
+    position: relative;
+}
+#heart{
+    position: absolute;
+    right: 2%;
+}
+  /********* Footer *******************/
+
+footer{
+    background-color: $orange !important;
+}
+    
+  
+

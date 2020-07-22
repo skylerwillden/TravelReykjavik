@@ -1,0 +1,58 @@
+@import "../node_modules/bulma/bulma";
+
+// * {outline: 1px dashed red;}
+
+//Colors ****************************
+$orange: #e19d20;
+$grey: #646464;
+$green: #2C8445;
+// ************* fonts *******************
+$normalText: "Dosis";
+
+
+
+    #navbarMenuHeroC{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navbar-item{
+        font-family: 'Amatic SC', cursive;
+        font-size: 2em;
+        
+        color: $green;
+    }
+    .navbar-item:hover{
+        color: $orange;
+        background-color: transparent;
+    }
+
+    #navItem1{
+        // animation-delay: .70s;
+    }
+    #navItem2{
+        // animation-delay: .85s;
+    }
+    #navItem3{
+        // animation-delay: 1s;
+    }
+
+    #logo{
+        max-width: 25vw;
+        height: 8vw;
+        // animation-name: NavIntro;
+        // animation-delay: 1.15s;
+        // opacity: 0;
+        animation-fill-mode: forwards;
+        animation-duration: 2s;
+    }
+
+
+
+
+ /********* Footer *******************/
+
+ footer{
+    background-color: $orange !important;
+}
+    
