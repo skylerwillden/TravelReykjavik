@@ -72,6 +72,7 @@
   "version": "0.0.4",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
+    "@glidejs/glide": "^3.4.1",
     "bulma-carousel": "^4.0.4",
     "npm": "^6.14.7",
     "start": "^5.1.0"

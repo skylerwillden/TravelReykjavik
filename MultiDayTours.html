@@ -10,61 +10,150 @@
     <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
     <link href="node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
     <link href="~bulma-carousel/dist/css/bulma-carousel.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"> -->
   </head>
   <body>
-    
-      <section class="hero is-large has-carousel">
-          <div class="hero-head">
-            <header class="navbar">
-                <div class="container">
-                  <div class="navbar-brand">
-                    <span class="navbar-burger burger" data-target="navbarMenuHeroC">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </span>
+    <section id="hero" class="hero is-fullheight">
+      <!-- Hero head: will stick at the top -->
+      <div class="hero-head">
+        <header class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+            <div id="navbarMenuHeroC" class="navbar-menu">
+              <div class="is-flex">
+                <a id="navItem1" href="index.html" class="navbar-item is-active">
+                  Home
+                </a>
+                <a id="navItem2" class="navbar-item">
+                   Offers
+                </a>
+                <!-- <figure class="image"> -->
+                  <img id="logo" src="images/TravelReykjavik-Logo.png">
+                <!-- </figure> -->
+                <a id="navItem3" href="MultiDayTours.html" class="navbar-item">
+                  Tours
+                </a>
+                <a id="navItem4" href="contact.html" class="navbar-item">
+                  Contact
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <!-- Hero content: will be in the middle -->
+        <div class="glide container">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <h1 id="tour-heading" class="has-text-centered">The Southern Coast</h1>
+                      <hr>
+                <div class="columns">
+                  <div class="column">
+                    <section id='ImageTiles'>
+                      <div class="container">
+                        <div class="grid-container ">
+                          <figure id="tile1B" onclick='tourSelect(this)' class="grid-item">
+                            <img src="images/Tours/Seljalands.jpg"  class="grid-image">
+                          </figure>
+                          <figure id="tile2B" onclick='tourSelect(this)' class="grid-item">
+                            <img src="images/Tours/SkogafossWide.jpg" class="grid-image">
+                          </figure>
+                          <figure id="tile3B" onclick='tourSelect(this)' class="grid-item">
+                            <img src="images/Tours/blacksand.jpg" class="grid-image">
+                          </figure>
+                          <figure id="tile4B" onclick='tourSelect(this)'  class="grid-item">
+                            <img src="images/Tours/Jokull.jpg" class="grid-image">
+                          </figure>
+                          <figure id="tile5B" onclick='tourSelect(this)' class="grid-item">
+                            <img src="images/Tours/Vik.jpg" class="grid-image">
+                          </figure>
+                          <figure id="tile6B" onclick='tourSelect(this)'  class="grid-item">
+                            <img src="images/Tours/dyrholaey.jpeg" class="grid-image">
+                          </figure>
+                          <figure id="tile7B" onclick='tourSelect(this)' class="grid-item">
+                            <img src="images/Tours/seljavallalaug.jpg" class="grid-image">
+                          </figure>
+                          <figure id="tile8B" onclick='tourSelect(this)'  class="grid-item">
+                            <img src="images/Tours/svartifoss.jpg" class="grid-image">
+                          </figure>
+                          <figure id="tile9B" onclick='tourSelect(this)' class="grid-item tooltip">
+                            <img src="images/Tours/klaustur.jpg" class="grid-image">
+                          </figure>
                   </div>
-                  <div id="navbarMenuHeroC" class="navbar-menu">
-                    <div class="is-flex">
-                      <a id="navItem1" href="index.html" class="navbar-item">
-                        Home
-                      </a>
-                      <a id="navItem2" class="navbar-item">
-                        Examples
-                      </a>
-                      <!-- <figure class="image"> -->
-                        <img id="logo" src="images/TravelReykjavik-Logo.png">
-                      <!-- </figure> -->
-                      <a id="navItem3" class="navbar-item">
-                        Documentation
-                      </a>
-                      <a id="navItem4" class="navbar-item">
-                        Contacts
-                      </a>
                     </div>
+                    </section>
+                  </div>
+                  <div id="right-column" class="column">
+                      <div id="tour-image-div">
+                        <img id="tour-image"  src="images/Tours/waltermitty.jpg" alt="">
+                      </div>
+                      <div id="tour-content-div">
+                        <h1 id="tour-subheading" class="has-text-centered" >Skogafoss</h1>
+                        <div id="info-columns" class="columns">
+                          <div id="tour-content-column1" class="column">
+                            <p id="tour-content">
+                              Along the Southern Coast of Iceland lies
+                              one of the most magnificent water features in all of Europe.
+                               Skogafoss presents a unique experience to nature lovers in that 
+                              it is viewable from both the base of the falls as well as 
+                              elevation. A short but steep hike from the base of the falls leads 
+                              up a hundred yard stair path ending in a can't miss outlook over the edge
+                              of Skogafoss.
+                           </p>
+                          </div>
+                          <div id="tour-content-column2" class="column">
+                            <div class="card">
+                              <div class="card-image">
+                                  <img src="images/Skogafoss.jpg" alt="Placeholder image">
+                              </div>
+                              <div class="card-bar is-flex">
+                                <i class="far fa-clock">6-8 Hours</i>
+                                <i id="tour-length-type" class="fas fa-tag">Single Day</i>
+                                <i id="number-of-people" class="fas fa-male">1</i>
+                              </div>
+                              <div class="card-content">
+                                <div class="content">
+                                  All Sales are fully refundable within 72 hours of purchase.
+                                  Special consideration is made for weather.
+                                  <br>
+                                  <time datetime="2020-07-25">11:09 PM - 25 July 2020</time>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div> 
+                      <!-- <div id='book-container' class="has-text-centered">
+                      <button id="book-button" class="button">Book Today</button>
+                      </div> -->
                   </div>
                 </div>
-              </header>
+              
+              </li> 
+              <li class="glide__slide"></li>
+              <li class="glide__slide"></li>
+            </ul>
           </div>
-        <div id="carousel-demo" class="hero-carousel">
-            <figure>
-                <img src="images/blacksand.jpg" alt="">
-                <img src="images/landmannalaugar.jpg" alt="">
-                <img src="images/Jokulsarlon.jpg" alt="">
-                
-            </figure>
+          <div class="glide__arrows" data-glide-el="controls">
+            <i  id="right-arrow" class="fas fa-arrow-circle-right fa-2x" data-glide-dir=">"></i>
+            <i  id="left-arrow" class="fas fa-arrow-circle-left fa-2x" data-glide-dir="<"></i>
+          </div>
         </div>
-        <div class="hero-head"></div>
-        <div class="hero-body"></div>
-        <div class="hero-foot"></div>
     </section>
-    
-  
-               
       
  
-        
-    <!-- <footer class="footer">
+           
+               
+      
+    <footer class="footer">
       <div class="content">
         <p>
           Langholtsvegur 115, 104 Reykjavík <br>
@@ -73,7 +162,13 @@
           +354 588 8660
         </p>
       </div>
-    </footer> -->
-    <script type="text/javascript" src="lib/main.js"></script>
+    </footer>
+    <script type="text/javascript" src="lib/multi.js"></script>
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script>
+      new Glide('.glide').mount()
+    </script>
   </body>
 </html>
+
+

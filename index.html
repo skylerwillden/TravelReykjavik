@@ -28,14 +28,14 @@
                 <a id="navItem1" class="navbar-item is-active">
                   Home
                 </a>
-                <a id="navItem2" href="MultiDayTours.html" class="navbar-item">
-                  Multi-Day
+                <a id="navItem2" class="navbar-item">
+                   Offers
                 </a>
                 <!-- <figure class="image"> -->
                   <img id="logo" src="images/TravelReykjavik-Logo.png">
                 <!-- </figure> -->
-                <a id="navItem3" class="navbar-item">
-                  Documentation
+                <a id="navItem3" href="MultiDayTours.html" class="navbar-item">
+                  Tours
                 </a>
                 <a id="navItem4" href="contact.html" class="navbar-item">
                   Contact
@@ -48,17 +48,35 @@
     
       <!-- Hero content: will be in the middle -->
       <div class="hero-body">
+        <div id="offerContainer">
+          
+          <div class="has-text-centered"><h2 id="offer" class="has-text-centered">R & R. <br> As nature intended...</h2>
+            <p>Learn about our limited time offer to experience <br>
+              the Blue Lagoon at a fraction of peak season's rates.<br>
+            It's time to make your dream vacation a reality today, <br>
+             with Travel Reykjavik.</p>
+              <button id="offerButton" class="button">Go</button>
+          </div>
+        </div>
        
       </div>
     </section>
     <section>
-      <div id="stickyIcons">
+      <div id="stickyIcons" class="is-hidden-mobile">
         <h1>Check Us Out:</h1>
-        <a href="https://www.facebook.com/travelreykjavik/"><i class="fab fa-facebook fa-2x extra-pad"></i></a>
-        <a href="https://twitter.com/SnaelandTravel"><i class="fab fa-twitter fa-2x extra-pad"></i></a>
-        <a href="https://www.instagram.com/snaeland.travel/"><i class="fab fa-instagram fa-2x extra-pad"></i></a>
-        <a href="https://www.tripadvisor.com/Attraction_Review-g189970-d12206036-Reviews-Snaeland_Travel-Reykjavik_Capital_Region.htmlz">
-        <i class="fab fa-tripadvisor fa-2x extra-pad"></i></a>
+        <div>
+          <a href="https://www.facebook.com/travelreykjavik/"><i class="fab fa-facebook fa-2x extra-pad"></i></a>
+        </div>
+        <div>
+          <a href="https://twitter.com/SnaelandTravel"><i class="fab fa-twitter fa-2x extra-pad"></i></a>
+        </div>
+        <div>
+          <a href="https://www.instagram.com/snaeland.travel/"><i class="fab fa-instagram fa-2x extra-pad"></i></a>
+        </div>
+        <div>
+          <a href="https://www.tripadvisor.com/Attraction_Review-g189970-d12206036-Reviews-Snaeland_Travel-Reykjavik_Capital_Region.htmlz">
+            <i class="fab fa-tripadvisor fa-2x extra-pad"></i></a>
+        </div>
       </div>
                  
     <section>
@@ -83,9 +101,11 @@
           <div class="column">
             <div class="card">
               <div class="card-image">
+                <a href="MultiDayTours.html">
                 <figure class="image is-4by3">
                   <img class="round-edges" src="images/daytours.jpg" alt="daytour">
                 </figure>
+              </a>
               </div>
               <div class="card-content">
                 <div class="media">
@@ -94,7 +114,7 @@
                   </div>
                 </div>
             
-                <div class="content has-text-centered">
+                <div class="content">
                   <p>Enjoy one of our daytime adventures
                     to the many beautiful sites located 
                   within a short drive of Reykjavik. </p>
@@ -105,9 +125,11 @@
           <div class="column">
             <div class="card">
               <div class="card-image">
+                <a href="MultiDayTours.html">
                 <figure class="image is-4by3">
-                  <img class="round-edges" src="images/multiday.JPG" alt="daytour">
+                  <img class="round-edges"  src="images/multiday.JPG" alt="daytour">
                 </figure>
+                </a>
               </div>
               <div class="card-content">
                 <div class="media">
@@ -116,7 +138,7 @@
                   </div>
                 </div>
             
-                <div class="content has-text-centered">
+                <div class="content">
                   <p>Come and experience Iceland the way it
                     was meant to be, with expert guides who know
                   all the breath-taking and unique sites that everyone
@@ -139,7 +161,7 @@
                   </div>
                 </div>
             
-                <div class="content has-text-centered">
+                <div class="content">
                   <p>Ride rare Icelandic horses or hike the beautiful waterall 
                     Glymur, or perhaps even scuba dive through the legendary Silvra along
                     the continental divide. At Travel Reykjavik we offer the most exciting 
@@ -163,7 +185,7 @@
                   </div>
                 </div>
             
-                <div class="content has-text-centered">
+                <div class="content">
                   <p >Check in frequently to see the irresistable offers
                     that Travel Reykjavik is frequently making available
                   to our customers to make their experience not only memorable,
@@ -172,6 +194,14 @@
               </div>
             </div>
           </div>
+        </div>
+        <div id="bus" class="container is-flex has-text-centered">
+          <h1>shuttle</h1>
+          <img src="images/bus.png" alt="">
+          <p class="">Book your shuttle with Travel Reykjavik Today!
+            We offer unbeatable deals to our customers!
+            
+          </p>
         </div>
       </div>
     </section>
@@ -184,16 +214,16 @@
             <div class="modal-card">
               <header class="modal-card-head has-text-centered">
                <p id="modalTitle" class="modal-card-title"><strong>Modal title  </strong></p>
+               <i id='heart' onclick="heartClicked()" class="fas fa-heart fa-2x"></i>
               </header>
               <section class="modal-card-body">
-                <figure>
+                <figure id="modalFigure">
                   <img id="modalPic" src="">
+                  <button id="button" class="button">Learn More</button>
                 </figure>
-                <div id="modalDescription" class="has-text-centered"></div>
-                <button id="button" class="button">Book Now</button>
               </section>
               <footer class="modal-card-foot">
-                <i id='heart' onclick="heartClicked()" class="fas fa-heart fa-2x"></i>
+                <div id="modalDescription" class="has-text-centered container"></div>
               </footer>
             </div>
           </div>

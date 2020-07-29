@@ -7134,6 +7134,7 @@ label.panel-block {
   padding: 3rem 1.5rem 6rem; }
 
 body {
+  font-family: "Dosis", sans-serif;
   padding: 0; }
 
 #siteBody {
@@ -7144,47 +7145,103 @@ body {
   background-image: url("../images/Blue-Lagoon.jpg");
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   animation-name: HeroIntro;
   animation-duration: 2s; }
   #hero #navbarMenuHeroC {
     flex-direction: row;
     justify-content: center; }
+  #hero .hero-body {
+    background: inherit; }
+  #hero #offerContainer {
+    position: absolute;
+    left: 20%;
+    bottom: 20%;
+    background: inherit;
+    width: 60%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 8px;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw; }
+    #hero #offerContainer div p {
+      color: white;
+      font-size: 1.1vw;
+      padding-right: 3vw;
+      padding-left: 3vw; }
+    #hero #offerContainer div #offerButton {
+      margin-top: 1vw;
+      background-color: #e19d20;
+      overflow: hidden;
+      color: #2C8445;
+      width: 10vw; }
+    #hero #offerContainer div #offerButton:hover {
+      opacity: 1;
+      transform: scale(1.05); }
+  #hero #offerContainer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(83, 110, 110, 0.507);
+    filter: blur(15px);
+    background: inherit; }
+  #hero #offer {
+    font-family: 'AMATIC SC', sans-serif;
+    color: white;
+    font-size: 5vw;
+    margin-left: auto;
+    margin-right: auto; }
+
+@keyframes offerAnimation {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
   #hero .navbar-item {
     font-family: 'Amatic SC', cursive;
     font-size: 2em;
     animation-name: NavIntro;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     opacity: 0;
     animation-fill-mode: forwards;
     color: #2C8445; }
   #hero .navbar-item:hover {
     color: #e19d20;
-    background-color: transparent; }
+    background-color: transparent;
+    font-size: 2.2em; }
   #hero #navItem1 {
-    animation-delay: .70s; }
+    animation-delay: .90s; }
   #hero #navItem2 {
-    animation-delay: .85s; }
+    animation-delay: .90s; }
   #hero #navItem3 {
-    animation-delay: 1s; }
+    animation-delay: .90s; }
+  #hero #navItem4 {
+    animation-delay: .90s; }
   #hero .hero-body div {
     position: relative; }
   #hero #logo {
+    padding: .5vw;
     max-width: 25vw;
     height: 8vw;
     animation-name: NavIntro;
-    animation-delay: 1.15s;
+    animation-delay: .75s;
     opacity: 0;
     animation-fill-mode: forwards;
-    animation-duration: 2s; }
+    animation-duration: 1.5s; }
 
 /******************************** Containers ***********************/
 .extendedPadding {
-  padding-top: 15%;
-  padding-bottom: 15%; }
+  padding-top: 12%;
+  padding-bottom: 12%; }
 
 /********************** Intro *****************************************/
 #intro {
-  width: 20%;
+  width: 25%;
   position: relative; }
   #intro h1 {
     font-family: "Amatic SC", cursive;
@@ -7198,13 +7255,12 @@ body {
       text-align: left; }
 
 #stickyIcons {
+  width: 150px;
   z-index: 99;
   position: sticky;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   top: 15%;
-  padding-left: 5%;
   padding-top: 2%; }
   #stickyIcons a {
     color: #2C8445; }
@@ -7215,26 +7271,33 @@ body {
     color: #e19d20;
     font-family: "Amatic SC", cursive;
     font-size: 3vh; }
-
-/******************************** Service CArds *************************/
-#serviceCards {
-  margin-left: 15%;
-  margin-right: 15%; }
-  #serviceCards .card {
-    box-shadow: none; }
-  #serviceCards .card-image:hover {
+  #stickyIcons div {
+    width: 75px; }
+  #stickyIcons i:hover {
     filter: brightness(1.1);
     transform: scale(1.03); }
-  #serviceCards .cardBar {
-    width: 100%;
-    height: 2vh;
-    background-color: #2C8445; }
-  #serviceCards .activityHeading {
-    font-family: "Amatic SC", cursive;
-    font-size: 1.5vw;
-    color: #e19d20; }
-  #serviceCards .content p {
-    font-size: .8vw; }
+
+/******************************** Service CArds *************************/
+#serviceCards .card {
+  box-shadow: none; }
+
+#serviceCards .card-image:hover {
+  filter: brightness(1.1);
+  transform: scale(1.03); }
+
+#serviceCards .cardBar {
+  width: 100%;
+  height: 2vh;
+  background-color: #2C8445; }
+
+#serviceCards .activityHeading {
+  font-family: "Amatic SC", cursive;
+  font-size: 2.2vw;
+  color: #e19d20; }
+
+#serviceCards .content p {
+  font-size: 1vw;
+  font-family: "Dosis", sans-serif; }
 
 .round-edges {
   border-radius: 7px; }
@@ -7354,8 +7417,8 @@ body {
     transform: translateX(15%); } }
 
 /*************************** MOdal *******************************/
-#modal-pic {
-  max-height: 10vw; }
+#modalFigure {
+  max-height: 60vh; }
 
 .modal-card-head {
   font-family: "Amatic SC", cursive;
@@ -7374,8 +7437,6 @@ body {
   background-color: white; }
 
 #modalDescription {
-  bottom: 0;
-  left: 0;
   background-color: #e19d20;
   color: white;
   font-family: 'Dosis', sans-serif; }
@@ -7383,17 +7444,22 @@ body {
 #button {
   background-color: #2C8445;
   color: white;
+  opacity: .7;
   position: absolute;
-  top: 47%;
-  left: 40%;
+  top: 42%;
+  left: 43%;
   border: none; }
+
+#button:hover {
+  opacity: 1;
+  filter: brightness(1.1);
+  transform: scale(1.03); }
 
 .modal-card-foot {
   position: relative; }
 
-#heart {
-  position: absolute;
-  right: 2%; }
+#heart:hover {
+  transform: scale(1.06); }
 
 /********* Footer *******************/
 footer {
@@ -7401,7 +7467,6 @@ footer {
 
 /****************** Hero2 Contact*****************************/
 #heroContact {
-  background-image: url("../images/Dettifoss.jpg");
   background-position: center;
   background-size: cover;
   animation-name: HeroIntro;
@@ -7454,3 +7519,54 @@ footer {
   background-color: #646464;
   opacity: .6;
   border-radius: 5px; }
+
+#bus {
+  position: relative;
+  height: 20vh;
+  width: 20%;
+  flex-direction: column; }
+  #bus:hover {
+    transform: scale(1.06);
+    filter: brightness(1.1); }
+  #bus h1 {
+    font-family: "Amatic SC", cursive;
+    font-size: 3vw;
+    color: #e19d20; }
+  #bus p {
+    font-family: "Dosis", sans-serif;
+    font-size: 1vw; }
+
+@media only screen and (max-width: 1215px) {
+  #bus p {
+    font-size: 1.2vw; }
+  #serviceCards .content p {
+    font-size: 1.2vw; }
+  #intro {
+    width: 30%; }
+    #intro h1 {
+      font-size: 5vw; } }
+
+@media only screen and (max-width: 1023px) {
+  #bus p {
+    font-size: 1.3vw; }
+  #serviceCards .content p {
+    font-size: 1.3vw; }
+  #intro {
+    width: 35%; }
+    #intro h1 {
+      padding-top: 2vw;
+      font-size: 6vw; } }
+
+@media only screen and (max-width: 768px) {
+  #bus p {
+    font-size: 2.2vw; }
+  #serviceCards .activityHeading {
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 5vw; }
+  #serviceCards .content p {
+    font-size: 2.2vw; }
+  #intro {
+    width: 50%; }
+    #intro h1 {
+      font-size: 7vw; } }

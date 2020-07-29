@@ -1,38 +1,5 @@
-// const { render } = require("node-sass");
-
-// let modal = document.getElementById("imageModal");
 
 
-// let imageClicked  = function(){
-
-//   let title;
-//   let description;
-
-//   switch(tile){
-//       case "tile1":
-//         title = jokulsarlon.title;
-//         description = jokulsarlon.description;
-//         break;
-//   }
-//   document.getElementById("modalHeader").innerHTML = title;
-//   document.getElementById("tourDescription").innerHTML = description;
-  
-
-  // modal.style.display="block";
-  // var id = setInterval(modalTransition, 10);
-  // var opacity = 0.0;
-  // function modalTransition() {
-  //   console.log("inside modalTransition");
-  //     if (opacity > .6){
-  //       console.log("in condition");
-  //       clearInterval(id);
-  //     } else{
-  //       modal.style.opacity = opacity + .01;
-  //       opacity += .01;
-  //       console.log(opacity);
-  //     }
-  // }
-// }
 
 let heartClicked = function(){
   if (document.getElementById("heart").style.color == "red"){
@@ -61,6 +28,12 @@ let deactivateModal = function(){
 }
 
 /************ image tiles */
+
+// 
+
+
+
+
 
 let tile1 = document.getElementById('tile1');
 tile1.title = "Jokulsarlon";
@@ -126,6 +99,9 @@ tile9.image = 'images/Glymur.jpg';
 
 
 
+
+
+
 /********************* Hamburger Toggle ***************/
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -155,5 +131,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Image Carousel *************************************
+// Tour Select *************************************
+
+
+
+
 

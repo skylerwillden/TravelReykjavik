@@ -1,4 +1,6 @@
 @import "../node_modules/bulma/bulma";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
 // * {outline: 1px dashed red;}
 
@@ -11,63 +13,293 @@ $normalText: "Dosis";
 
 
 
-    #navbarMenuHeroC{
-        flex-direction: row;
-        justify-content: center;
-    }
 
-    .navbar-item{
-        font-family: 'Amatic SC', cursive;
-        font-size: 2em;
-        
-        color: $green;
-    }
-    .navbar-item:hover{
-        color: $orange;
-        background-color: transparent;
-    }
-
-    #navItem1{
-        // animation-delay: .70s;
-    }
-    #navItem2{
-        // animation-delay: .85s;
-    }
-    #navItem3{
-        // animation-delay: 1s;
-    }
-
-    #logo{
-        max-width: 25vw;
-        height: 8vw;
-        // animation-name: NavIntro;
-        // animation-delay: 1.15s;
-        // opacity: 0;
-        animation-fill-mode: forwards;
-        animation-duration: 2s;
-    }
+   
+ 
 
     /*************************** Image Carousel *********************/
-    .hero{
-        margin-left: 10%;
-        margin-right: 10%;
-        max-height: 60vh;
-        overflow: hidden;
+    #hero {
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        animation-name: HeroIntro;
+        animation-duration: 2s;
+
+    
+        #navbarMenuHeroC{
+            flex-direction: row;
+            justify-content: center;
+        }
+        .glide{
+            margin-top: 5%;
+            margin-bottom: 10%;
+
+            .glide__track{
+                // border: solid black;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .column{
+                
+            }
+            .glide__bullet{
+                
+            }
+            #right-arrow{
+                // background-color: $orange;
+                color: $orange;
+                position: absolute;
+                right: -5%;
+                top: 46%;
+                &:hover{
+                    transform: scale(1.06);
+                }
+            }
+            #left-arrow{
+                color: $orange;
+                position: absolute;
+                left: -5%;
+                top: 46%;
+                &:hover{
+                    transform: scale(1.06);
+                }
+            }
+        }
+
+        // Right Side Tour Column --------------------------
+        #right-column{
+            margin-bottom: 0;
+            padding-bottom: 0;
+            animation-name: tileIntro;
+            animation-delay: 1.75s;
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+            opacity: 0; 
+        }
+       #info-columns{
+           padding: 0;
+           margin-bottom: 0 !important;
+       }
+        #tour-image-div{
+            position: relative;
+            margin-right: auto;
+            margin-left: auto;
+            max-height: 32vh;
+            overflow: hidden;
+        }
+        #tour-image{
+            // background-position: center;
+            // width: 100%;
+            // width: 100%;
+        }
+        
+        #tour-heading{
+            font-family: "Amatic SC", cursive;
+            color: $orange;
+            font-size: 3vw;
+            animation-name: tileIntro;
+            animation-delay: 1.35s;
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+            opacity: 0;
+        }
+        hr{
+            margin-top: 0;
+            color: black !important;
+        }
+        #tour-subheading{
+            font-family: "Amatic SC", cursive;
+            font-size: 2vw;
+            color: $orange;
+            margin-bottom: 1vw;
+        }
+        #tour-content-div{
+            
+        }
+        #tour-content{
+            font-size: .8vw;
+            font-family: "Dosis", sans-serif;
+        }
+        #tour-content-column1{
+            
+        }
+        #tour-content-column2{
+            padding: 0;
+            .card{
+                background-color: $grey;
+                .card-content{
+                    color: white;
+                    font-family: "Dosis", sans-serif;
+                    font-size: .9vw;
+                }
+            }
+            .card-image{
+                max-height: 20vh;
+                overflow: hidden;
+            }
+            img{
+                max-height: 50vh;
+                width: 100%;
+            }
+            .card-bar{
+                background-color: $orange;
+                justify-content: space-around;
+                i{
+                    display: inline;
+                    padding-top: .5vw;
+                    padding-bottom: .5vw;
+                    color: $white;
+                }
+            }
+        }
+        #book-container{
+            // position: relative;
+        }
+        #book-button{
+            position: absolute;
+            bottom: 0;
+            // left: 0;
+            background-color: $green;
+        }
+       
+    
+        .navbar-item{
+            font-family: 'Amatic SC', cursive;
+            font-size: 2em;
+            animation-name: NavIntro;
+            animation-duration: 1.45s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            color: $green;
+        }
+        .navbar-item:hover{
+            color: $orange;
+            background-color: transparent;
+            font-size: 2.2em;
+        }
+    
+        #navItem1{
+            animation-delay: .90s;
+        }
+        #navItem2{
+            animation-delay: .90s;
+        }
+        #navItem3{
+            animation-delay: .90s;
+        }
+        #navItem4{
+            animation-delay: .90s;
+        }
+    
+        .hero-body{
+            // border: solid black;
+            div{
+                position: relative;
+                // border: solid black;
+            }
+        }
+    
+        #logo{
+            padding: .5vw;
+            max-width: 25vw;
+            height: 8vw;
+            animation-name: NavIntro;
+            animation-delay: .75s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            animation-duration: 1.5s;
+        }
+    }
+
+    // Animations *******************************************
+//Entry Animation
+
+@keyframes HeroIntro{
+    from {filter: blur(5px)}
+    to {filter: blur(0)}
+  }
+
+  @keyframes NavIntro{
+      from {opacity: 0;
+            transform: translateY(10%);}
+      to {opacity: 1;
+            }
+  }
+
+  #ImageTiles {
+    position: relative;
+    opacity: 0;
+    animation-name: tileIntro;
+    animation-delay: 1.75s;
+    animation-duration: 1.75s;
+    animation-fill-mode: forwards;
+
+    @keyframes tileIntro{
+        from{opacity: 0; filter: blur(10px);}
+        to{opacity: 1; fitler: blur(0);}
+    }
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 10vh);
+        max-width: 650px;
+    }
+    
+
+    .grid-image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding: .3vw;
         
     }
 
-    .hero-carousel{
-        figure{
-          
-           
-        }
-        img{
-            
-            
-        }
-        
+    .grid-item:hover{
+        animation-name: TileHover; 
+        animation-fill-mode: forwards;
+        transform: scale(1.03);
+
     }
 
+
+    #tile1B{
+        grid-area: 1/1/5/5;
+        z-index: 0;
+    }
+
+    #tile2B{
+        grid-area: 1/5/3/7;
+        z-index: 0;
+    }
+
+    #tile3B{
+        grid-area: 1/7/4/9;
+    }
+    #tile4B{
+        grid-area: 3/5/7/7;
+    }
+    #tile5B{
+        grid-area: 5/1/7/5;
+    }
+    #tile6B{
+        grid-area: 7/1/9/3;
+        // background-color: orange;
+    }
+    #tile7B{
+        grid-area: 4/7/6/9;
+        // background-color: orange;
+    }
+    #tile8B{
+        grid-area: 7/3/9/7;
+        // background-color: orange;
+    }
+    #tile9B{
+        grid-area: 6/7/9/9;
+        // background-color: orange;
+    }
+}
 
 
  /********* Footer *******************/
@@ -75,4 +307,37 @@ $normalText: "Dosis";
  footer{
     background-color: $orange !important;
 }
+
+/************ All Buttons on select ***********/
+
+i:active{
+    color: $green !important;
+}
     
+
+@media only screen and (max-width: 1215px){
+    #tour-content{
+        font-size: 1.2vw !important;
+    }
+    #tour-subheading{
+            font-size: 4vw;
+    }
+}
+
+@media only screen and (max-width: 1023px){
+    #tour-content{
+        font-size: 1.3vw !important;
+    }
+    #tour-subheading{
+        font-size: 4vw !important;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #tour-content{
+        font-size: 2.2vw !important;
+    }
+    #tour-subheading{
+        font-size: 5vw !important;
+    }
+}
